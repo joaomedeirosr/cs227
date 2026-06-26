@@ -27,7 +27,7 @@ atraves dos dados que foi treinado. Mas sim aprender a generalizar para todos os
 - Ciberseguranca
 
 ## Machine Learning Pipeline
-![ml-pipeline](image.png)
+![ml-pipeline](img/ml-pipeline.png)
 
 Todas as etapas sao extremamente importantes, dentro do fluxo ou pipeline de um modelo de machine learning. Porem, vale destacar que as etapas `2`e `3`sao de suma importancia.
 
@@ -80,9 +80,89 @@ Porém, se fizermos outra observacao na regiao onde a variavel categorica do tam
 
 Na verdade nao existe uma regra e pode-se utilizar machine learning, em teoria em qualquer tipo de problema. Porem, o termo mais adequado seria dizer quando e recomendado se utilizar aprendizado de maquina entao:
 
-- Existe um padrao;
-- Nao existe uma funcao que resolve o problema;
+- Quando existe um padrao;
+- Utilizo quando nao existe uma funcao que resolve o problema;
 - E o mais importante e crítico a existencia de **dados**;
+
+**E o mais importante se nestes meus dados, nao exista um padrao, ou na ha dados disponiveis e que eles nao consigam representar bem o meu problema, eu nao vou conseguir um modelo que ira aprender e performar bem.**
 
 
 ## Componentes do aprendizado de maquina
+
+Imagine um problema simples de analise de credito
+
+- Problema: Analise de credito
+    
+-Dados: 
+
+| Variaveis | Valor |
+|------| ---------|
+| idade | 25 anos |
+| sexo| masculino|
+| salario| R$5000 |
+| anos na residencia | 1 ano |
+| debito atual | R$ 20.000 |
+| ... | ... |
+
+### Como definir dado estes dados aprovo ou nao o credito para este cliente ?
+
+Para isso preciso formalizar o problema:
+
+- Entrada: $x$ - (dados do cliente);
+- Saida: $y$ - (bom ou mau cliente);
+- Funcao objetivo: $f = X \to Y$ - (funcao ideal);
+- Dados: ($x_1$,$y_1$), ($x_2$,$y_2$),($x_n$,$y_n$) - (registros do historico);
+- Hipotese: $g$ = $X \to Y$ - (funcao a ser utilizada)
+
+#### Obs: 
+- Dados $x_1,.., x_n$, representam a minha coluna de variaveis: (idade,sexo,salario) e $y$ representa minha coluna de valores: (25 anos, masculino, 1 ano, R$ 5000)
+- Hipotese, representa justamente o algoritmo que vai ser treinado utilizando os dados e vai me gerar como resposta a hipotese que leva $X \to Y$ ou seja, que a partir de um conjunto de variaveis ($X$) ele e um bom pagador ($Y$)
+
+**E sendo assim, vamos utilizar uma maquina de aprendizado, e dependendo desta maquina de aprendizado ela vai utilizar a estrategia dela para obter esta hipotese.**
+
+![ml-training](img/ml-component.png)
+
+
+## Tipos de Aprendizado
+1. Aprendizado Supervisionado
+2. Aprendizado Nao-supervisionado
+3. Aprendizado Por reforco
+
+Estes, sao os ditos tipos de aprendizado classicos, porem existem outros que sao mesclas entre os classicos e utilizacao de tecnicas, tais como:
+
+- Aprendizado semi-supervisionado;
+- Aprendizado auto-supervisionado;
+- Aprendizado online;
+- Aprendizado Federado;
+- Apredizado Multitarefa;
+- Apredizado Multi-instancia;
+- Aprendizado por imitacao;
+- Meta Aprendizado;
+- Aprendizado Contrastivo;
+- Aprendizado por Representacao;
+- Aprendizado Incremental;
+---
+
+### 1. Aprendizado Supervisionado
+
+No aprendizado supervisionado como o proprio nome ja sugere, a ideia principal e supervisionar a maquina. Mas como supervisionar a maquina? A ideia de supervisao de uma maquina seria fornecer para ela exemplos ou rotulos (labels),sobre o que sao as coisas que ela esta tentando aprender.
+
+Ou seja, no aprendizado supervisionado estamos tentando fazer **predicoes** com base em exemplos rotulados tendo o meu $X$ e tenho o meu $Y$ que seriam a minha entrada e minha saida desejada desse exemplo que vai estar presente no meu conjunto de dados, respectivamente.
+
+Logo, este algoritmo vai tentar encontrar relacoes, entre os meus **atributos de entrada** ($X$) e meu **atributo alvo ($Y$)**
+
+Dentro do **Aprendizado Supervisionado** temos dois problemas classicos:
+- **Classificacao**: Neste problema a saida ou alvo ($Y$) e uma categoria ou chamado de categorico (e-mail e spam/n spam?)
+- **Regressao**: Ja na regressao a saide e um valor numerico ($Y$) exemplo prever o preco de uma casa, dado o numero de quartos e o bairro.
+
+Aqui dentro da categoria do aprendizado supervisionado podemos incluir os problemas de Series Temporais (ex: prever uma venda)
+
+### 2. Aprendizado Nao-supervisionado
+
+A diferenca entre o aprendizado supervisionado e nao supervisionado e justamente no que diz respeito ao alvo ou melhor dizendo a saida, pois no aprendizado nao supervisionado ao inves de ter a entrada e a saida ($X$,$Y$) eu tenho apenas a entrada ($X$) ou seja nao tenho informacao sobre a saida deseja.
+
+Portanto, a principal estrategia utilizada por este tipo de aprendizagem e tentar criar clusteres ou regioes onde os dados de entrada ($X$) formem regioes ou grupos de alta correlacao no espaco entre as entradas e criar uma forma de separar, categorizar ou ate mesmo o termo bastante utilizado "clusterizar" estes grupos ou categorias diferentes entre estes dados.
+
+Mas, uma grande duvida que fica quando falamos em aprendizado nao supervisionado e: "Como eu sei que meu modelo esta aprendendo?", pois no aprendizado supervisionado, eu tenho a informacao da **saida esperada** e ja no nao-supersionado essa saida ela nao existe entao como entender se a maquina de aprendizado esta "Aprendendo"?
+
+
