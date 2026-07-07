@@ -55,6 +55,7 @@ Esse projeto é mantido por:
         <br />
         <sub><b>João Victor Rocha</b></sub>
       </a>
+</table>
 
 ## 🥇 License
 
