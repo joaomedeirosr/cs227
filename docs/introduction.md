@@ -227,11 +227,13 @@ Portanto: o modelo provavelmente esta aprendendo apenas ruido, e peculiaridades 
 
 ---
 
-**2) Underfitting: Ocorre quando, o erro dentro das minhas amostras para um dataset de treino e muito baixo. Mas o erro dentro das minhas amostras para um dataset desconhecido ou nao visto durante o treino tambem e muito baixo** 
+**2) Underfitting: Ocorre quando, o erro dentro das minhas amostras para um dataset de treino e muito alto. E o erro dentro das minhas amostras para um dataset desconhecido ou nao visto durante o treino tambem e muito alto** 
 
-Ou seja, treinei meu modelo e o resultado e tao ruim que o modelo nao e capaz por exemplo de classificar corretamente nem para minhas amostras do dataset de treino tao pouco para novas amostras de um dataset desconhecido ou nao visto durante o treino, logo o modelo e ruim tanto dentro das amostras de treino quanto para amostras fora do treino e isso significa portanto que o modelo nao aprendeu nada.
+Ou seja, treinei meu modelo e o resultado e tao ruim que o modelo nao e capaz por exemplo de classificar corretamente nem para minhas amostras do dataset de treino ($E_{in}$) tao pouco para novas amostras ($E_{out}$) de um dataset desconhecido ou nao visto durante o treino, logo o modelo e ruim tanto dentro das amostras de treino quanto para amostras fora do treino e isso significa portanto que o modelo nao aprendeu nada. 
 
- $$E_{in} \downarrow \space E_{out} \downarrow$$
+>Ou seja, o modelo possui baixa capacidade de representação (ou capacidade insuficiente) para aprender os padrões dos dados.
+
+ $$E_{in} \uparrow \space E_{out} \uparrow$$
 
 Veja uma imagem abaixo que e um grafico muito famoso mostrando o **Tradeoff existente entre Overffiting vs Underfitting.**
 
