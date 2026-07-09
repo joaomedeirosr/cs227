@@ -223,7 +223,7 @@ Entao, dado a teoria de generalizacao, podemos dizer que o Overfitting e Underfi
  
 Ou seja, eu treinei meu modelo ele foi muito bem no conjunto de treinamento, esta me dando por exemplo uma metrica de acuracia de 98%. Mas quando eu apresento pra ele uma amostra fora deste conjunto ele nao consegue fazer a classificacao da maneira correta por exemplo.
 
-Portanto: o modelo provavelmente esta aprendendo apenas ruido, e peculiaridades dos dados de treino e com isso ele nao tem **capacidade de generalizacao fora deste dominio (para novas amostras de um dataset desconhecido)**
+> Portanto: o modelo provavelmente esta aprendendo apenas ruido, e peculiaridades dos dados de treino e com isso ele nao tem **capacidade de generalizacao fora deste dominio (para novas amostras de um dataset desconhecido)**
 
 ---
 
