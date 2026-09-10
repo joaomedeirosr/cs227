@@ -27,7 +27,7 @@ The goal is to organize theoretical concepts, mathematical foundations, practica
 | 01 | [Introducao](docs/introduction.md) | ✅ |
 | 02 | [Instance based learning](docs/instance_based_learning.md) | ✅ |
 | 03 | [Data pre-processing](docs/preprocessing_techniques.md) | ✅ |
-| 04 | [Data pre-processing](docs/linear_regression.md) | ⬜ |
+| 04 | [Linear regression and Naive bayes](docs/linear_regression_and_naive.md) | ⬜ |
 
 
 
