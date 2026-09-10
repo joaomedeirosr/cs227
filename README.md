@@ -25,13 +25,17 @@ The goal is to organize theoretical concepts, mathematical foundations, practica
 | Aula | Topico | Status |
 |---------|-------|:------:|
 | 01 | [Introducao](docs/introduction.md) | ✅ |
-| 02 | [Instance based learning](docs/instance_based_learning.md) | ⬜ |
+| 02 | [Instance based learning](docs/instance_based_learning.md) | ✅ |
+| 03 | [Data pre-processing](docs/preprocessing_techniques.md) | ✅ |
+| 04 | [Data pre-processing](docs/linear_regression.md) | ⬜ |
+
 
 
 ## 🔍 Referencias
 
 ### 📚 Livros
 
+- Machine Learning
 - Pattern Recognition and Machine Learning
 - Introduction to Statistical Learning
 - Elements of Statistical Learning
